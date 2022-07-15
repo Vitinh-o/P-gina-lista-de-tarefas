@@ -17,7 +17,7 @@ h1{text-align: center;
 
 
 .botao_tarefas{background-color:  red;
-                border: none;
+                border-style: none;
                 border-radius: 15px;
                 padding: 1.5%;
                 color: white;
@@ -28,3 +28,4 @@ h1{text-align: center;
 
 .botao_tarefas:hover{background-color: green ;
                         color: white;}  
+
