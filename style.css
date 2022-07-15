@@ -1,0 +1,30 @@
+body{background-color: burlywood;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;}
+
+.principal{background-color: white;
+            height: 100vh;
+            width: 60%;
+            margin: auto;
+            overflow: hidden;}
+
+
+h1{text-align: center;
+    margin-top:30px;
+    font-size: xx-large;
+    font-family: 'Edu SA Beginner', cursive;}
+
+
+.botao_tarefas{background-color:  red;
+                border: none;
+                border-radius: 15px;
+                padding: 1.5%;
+                color: white;
+                margin-top: 8px;
+                margin-right: 15px;
+                float: right;
+                font-size:smaller;}
+
+.botao_tarefas:hover{background-color: green ;
+                        color: white;}  
