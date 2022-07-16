@@ -29,3 +29,19 @@ h1{text-align: center;
 .botao_tarefas:hover{background-color: green ;
                         color: white;}  
 
+.form_estilo{background-color:gray;
+                color: white;
+                height: 22vh;
+                width: 25%;
+                overflow: hidden;
+                margin: auto;
+                border-radius: 8px;
+                position: absolute;}
+
+.estilo_prin{margin: auto;}
+
+.estilo_texto{resize: none;}
+
+img{width: 5%;
+    float: right;
+    margin: 5px;}
