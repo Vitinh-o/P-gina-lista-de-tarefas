@@ -36,7 +36,8 @@ h1{text-align: center;
                 overflow: hidden;
                 margin: auto;
                 border-radius: 8px;
-                position: absolute;}
+                position: absolute;
+                display: none;}
 
 .estilo_prin{margin: auto;}
 
@@ -44,4 +45,5 @@ h1{text-align: center;
 
 img{width: 5%;
     float: right;
-    margin: 5px;}
+    margin: 5px;
+    }
