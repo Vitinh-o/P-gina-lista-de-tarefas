@@ -6,7 +6,7 @@ function abrir_popup(){
 
     let form = document.getElementById("form_func")
 
-    form.style.display = "inline"
+    form.style.display = "block"
 
     console.log("teste")
 
@@ -27,7 +27,6 @@ function fechar_img(){
     console.log("teste")
 }
 
-var i = 0   
 
 var tarefas = document.getElementById("botao_adicionar")
 
@@ -35,22 +34,26 @@ tarefas.addEventListener("click", adicionar_tarefas)
 
 function adicionar_tarefas(){
 
-    let tarefas = []
+    let tarefas 
 
-    let adicionando= []
+    let adicionando
 
-    tarefas[i] = document.getElementById("tarefas").value
+    tarefas = document.getElementById("tarefas").value
 
-    adicionando[i] = document.getElementById("novas_tarefas")
+    lu= document.getElementById("novas_tarefas")
 
-    console.log(tarefas)
+    // let data_inc = document.getElementById("funcao_data")
+
+    // let data_finc =  Date.toISOString(document.getElementById("funcao_data_finc").value)
+
+    adicionando = document.createElement('li');
+
+    adicionando.innerHTML = tarefas + "<hr>" 
+
+    lu.appendChild(adicionando)
 
     console.log(adicionando)
 
-    adicionando[i].innerHTML = "<li>" + tarefas + "</li>"
-    
-
-    i+=1
 }
 
 

@@ -19,22 +19,26 @@
         </header>
         <section>
             <button id="botao_funcionalidade" type="button" class="botao_tarefas">Adicionar nova tarefa</button>
+            <br> <br> <br>
         </section>
-        <ul id="novas_tarefas">
-            
-
-        </ul>
         <section  class="form_estilo" id="form_func">
             
                 <img src="./imagens/new_x.png" alt="x para fechar imagem" id="img_func">
                 <label for="tarefa" class="estilo_prin">Insira a tarefa no campo abaixo</label><br>
                 <textarea  name="text" id="tarefas" class="estilo_texto" cols="25" rows="5"></textarea><br>
                 <label for="hora-data-inicio" class="estilo_prin">Insira a hora e data de ínicio</label><br>
-                <input type="datetime-local"class="estilo_prin"><br>
+                <input type="datetime-local"class="estilo_prin" id="funcao_data"><br>
                 <label for="hora-data-final" class="estilo_prin">Insira a hora e data de término</label><br>
                 <input type="datetime-local"class="estilo_prin">
-                <button class="botao_tarefas" id="botao_adicionar"> Adicionar tarefa</button>
+                <button class="botao_tarefas" id="botao_adicionar" id="funcao_data_term"> Adicionar tarefa</button>
+                <br><br><br><br><br>
          
+        </section>
+        <section>
+            <ol id="novas_tarefas" class="estilo_lista">
+            
+
+            </ol>
         </section>
     </main>
 
