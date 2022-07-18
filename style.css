@@ -1,17 +1,19 @@
 body{background-color: burlywood;
         font-family: Arial, Helvetica, sans-serif;
         margin: 0;
-        padding: 0;}
+        padding: 0;
+        overflow: auto;}
 
 .principal{background-color: white;
             height: 100vh;
             width: 60%;
             margin: auto;
-            overflow: hidden;}
+            padding-top: 1px;
+            }
 
 
 h1{text-align: center;
-    margin-top:30px;
+    margin-top:20px;
     font-size: xx-large;
     font-family: 'Edu SA Beginner', cursive;}
 
@@ -19,10 +21,10 @@ h1{text-align: center;
 .botao_tarefas{background-color:  red;
                 border-style: none;
                 border-radius: 15px;
-                padding: 1.5%;
+                padding: 10px;
                 color: white;
                 margin-top: 8px;
-                margin-right: 15px;
+                margin-right: 13px;
                 float: right;
                 font-size:smaller;
                 }
@@ -32,16 +34,17 @@ h1{text-align: center;
 
 .form_estilo{background-color:gray;
                 color: white;
-                height: 250px;
-                width: 230px;
+                height: 260px;
+                width: 250px;
                 overflow: hidden;
                 margin: auto;
                 border-radius: 8px;
-                float: right;
+                float:right;
                 display: none;
                 margin-right: 15px;}
 
-.estilo_prin{margin: auto;}
+.estilo_prin{margin-left: 7px;
+                margin-top: 4px;}
 
 .estilo_texto{resize: none;}
 
@@ -51,5 +54,6 @@ img{width: 5%;
     }
 
 .estilo_lista{list-style-position: inside;
-                padding: 0;}
+                padding: 0;
+                clear: right;}
 
