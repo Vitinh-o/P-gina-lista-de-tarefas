@@ -48,7 +48,7 @@ function adicionar_tarefas(){
     // let data_finc =  Date.toISOString(document.getElementById("funcao_data_finc").value)
 
     adicionando = document.createElement('li');
-
+    
     adicionando.innerHTML = criar + "<hr>" 
 
     lu.appendChild(adicionando)
