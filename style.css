@@ -19,15 +19,16 @@ h1{text-align: center;
     font-family: 'Edu SA Beginner', cursive;}
 
 
+
 .botao_tarefas{background-color:  rgb(1, 255, 99);
-                border-style: none;
                 border-radius: 15px;
-                padding: 10px;
-                color: white;
-                margin-top: 8px;
-                margin-right: 13px;
                 float: right;
+                margin-top: 8px;
+                margin-right: 15px;
+                padding: 12px;
+                border-style: none;
                 font-size:smaller;
+                color: white;
                 }
 
 .botao_tarefas:hover{background-color: rgb(5, 114, 34) ;
@@ -35,22 +36,24 @@ h1{text-align: center;
 
 .form_estilo{background-color:rgba(90, 202, 202, 0.555);
                 color: white;
-                height: 260px;
-                width: 250px;
+                height: 340px;
+                width: 97%;
                 overflow: hidden;
                 margin: auto;
                 border-radius: 8px;
-                float:right;
                 display: none;
                 margin-right: 15px;}
 
 .estilo_prin{margin-left: 7px;
                 margin-top: 4px;
+                width: 25%;
                 }
 
-.estilo_texto{resize: none;}
+.estilo_texto{resize: none;
+                width:65% ;
+                height: 110px;}
 
-img{width: 8%;
+img{width: 3%;
     float: right;
     margin: 5px;
     }
@@ -59,28 +62,33 @@ img{width: 8%;
                 padding: 0;
                 clear: right;}
 
+.estilo_titulo{width: 45%;}
+
+@media screen and (max-width: 750px){
 
 
-@media screen and (max-width: 500px){
+.principal{width: 100%;}
 
-.form_estilo{width: 210px;
+.form_estilo{width: 100%;
                 height: 280px;}
+
+.estilo_texto{height: 55px;}
+
+img{width: 7%;}
 
 }
 
 
-@media screen and (min-width: 1700px){
+@media screen and (min-width: 1800px){
 
     body{font-size: x-large}
 
-    .form_estilo{height: 370px;
-                    width: 350px;
+    .form_estilo{height: 470px;
                     }
-    
-    .estilo_prin{width: 300px;
-                    height: 30px;}
 
-    .estilo_texto{height: 100px;
+     .estilo_prin{height: 25px;}
+
+    .estilo_texto{height: 175px;
                     font-size: x-large;}
     
     }

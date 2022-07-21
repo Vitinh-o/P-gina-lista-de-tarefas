@@ -39,21 +39,28 @@ function adicionar_tarefas(){
 
     let adicionando
 
-    criar = document.getElementById("tarefas").value
+    let descricao = document.getElementById("descricao").value
 
-    lu= document.getElementById("novas_tarefas")
+    let titulo = document.getElementById("titulo").value
 
-    // let data_inc = document.getElementById("funcao_data")
-
-    // let data_finc =  Date.toISOString(document.getElementById("funcao_data_finc").value)
+    ul= document.getElementById("novas_tarefas")
 
     adicionando = document.createElement('li');
+    adicionando.setAttribute("id" ,"list-item")
+
+    adicionando.innerHTML = titulo 
+
+    ul.appendChild(adicionando)
+
+    li = document.getElementById("list-item")
+
+    adicionando = document.createElement('p');
     
-    adicionando.innerHTML = criar + "<hr>" 
+    adicionando.innerHTML = "Descrição: " +  "<br>" + "......." + descricao  
 
-    lu.appendChild(adicionando)
+    li.appendChild(adicionando)
 
-    guarda_valor(criar)
+    guarda_valor(titulo, descricao)
 
 }
 
@@ -70,17 +77,17 @@ else{
 
 
 
-function guarda_valor(criar)
+function guarda_valor(titulo)
 {
 
-    guarda_valores.tarefas_guard.push(criar)
+    guarda_valores.tarefas_guard.push(titulo)
     
     json = JSON.stringify(guarda_valores)
 
     localStorage.setItem("lista", json)
 
     console.log(json)
-    console.log(criar)
+    console.log(titulo)
     console.log(guarda_valores.tarefas_guard)
 
     
