@@ -1,3 +1,4 @@
+var i = 0 
 
 var botao_func = document.getElementById("botao_funcionalidade")
 
@@ -27,9 +28,7 @@ function fechar_img(){
 
     console.log("teste")
 }
-
-
-var j = 0   
+ 
 
 var tarefas = document.getElementById("botao_adicionar")
 
@@ -45,8 +44,11 @@ function adicionar_tarefas(){
 
     let titulo = document.getElementById("titulo").value
 
-    let hora_inc = document.getElementById("funcao_data")
+    let hora_inc = document.getElementById("funcao_data").value
 
+    let hora_fim = document.getElementById("funcao_data_fim").value
+
+    console.log(hora_fim)
     console.log(hora_inc)
 
     ul= document.getElementById("novas_tarefas")
@@ -58,15 +60,34 @@ function adicionar_tarefas(){
 
     ul.appendChild(adicionando)
 
-    li = document.getElementsByTagName("li")[j]
+    li = document.getElementsByTagName("li")[i]
 
     adicionando = document.createElement('p');
     
     adicionando.innerHTML = "Descrição: " +  "<br>" + "......." + descricao  
 
     li.appendChild(adicionando)
-    j++
+
     
+    adicionando = document.createElement('button')
+    adicionando.setAttribute("class" ,"botao_excluir")
+    adicionando.setAttribute("onclik" ,"excluir()")
+    
+    adicionando.innerHTML = "Excluir tarefa"  
+
+    
+    li.appendChild(adicionando)     
+    
+    adicionando = document.createElement('p')
+    
+    adicionando.setAttribute("class" ,"style")
+
+    adicionando.innerHTML ="Hora de início: " + hora_inc + "<br>" + "Hora fim: " + hora_fim  + "<hr>"    
+
+    li.appendChild(adicionando) 
+
+    i++
+
     guarda_valor(titulo, descricao)
 
 }
@@ -133,7 +154,15 @@ function recupera_dados()
         adicionando.innerHTML = "Descrição: " +  "<br>" + "......." + novo_json.descricao_guard[i]  
     
         li.appendChild(adicionando)
+        i++
+
     } 
+}
+
+
+function excluir(){
+
+
 }
 
 recupera_dados()
