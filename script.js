@@ -29,6 +29,8 @@ function fechar_img(){
 }
 
 
+var j = 0   
+
 var tarefas = document.getElementById("botao_adicionar")
 
 tarefas.addEventListener("click", adicionar_tarefas)
@@ -43,23 +45,28 @@ function adicionar_tarefas(){
 
     let titulo = document.getElementById("titulo").value
 
+    let hora_inc = document.getElementById("funcao_data")
+
+    console.log(hora_inc)
+
     ul= document.getElementById("novas_tarefas")
 
     adicionando = document.createElement('li');
-    adicionando.setAttribute("id" ,"list-item")
+    adicionando.setAttribute("class" ,"list-item")
 
     adicionando.innerHTML = titulo 
 
     ul.appendChild(adicionando)
 
-    li = document.getElementById("list-item")
+    li = document.getElementsByTagName("li")[j]
 
     adicionando = document.createElement('p');
     
     adicionando.innerHTML = "Descrição: " +  "<br>" + "......." + descricao  
 
     li.appendChild(adicionando)
-
+    j++
+    
     guarda_valor(titulo, descricao)
 
 }
@@ -70,50 +77,62 @@ function adicionar_tarefas(){
 
 if (localStorage.hasOwnProperty("lista")) {
     var guarda_valores = JSON.parse(localStorage.getItem("lista"))
-  }
+    //console.log("teste novo")
+}
 else{
-     guarda_valores = {tarefas_guard: []}
+     guarda_valores = {titulo_guard:[],
+                        descricao_guard:[]}
+
+    console.log(guarda_valores)
 }
 
 
 
-function guarda_valor(titulo)
+function guarda_valor(titulo ,descricao)
 {
 
-    guarda_valores.tarefas_guard.push(titulo)
+    guarda_valores.titulo_guard.push(titulo)
+    guarda_valores.descricao_guard.push(descricao)
     
+    
+
     json = JSON.stringify(guarda_valores)
 
     localStorage.setItem("lista", json)
 
-    console.log(json)
+   /* console.log(json)
     console.log(titulo)
-    console.log(guarda_valores.tarefas_guard)
-
-    
-
+    console.log(guarda_valores)*/
 }
 
 
 function recupera_dados()
 {
-    console.log("teste 2")
+    //console.log("teste 5")
     let mudar_json = localStorage.getItem("lista")
 
      let novo_json = JSON.parse(mudar_json)
-
-    for (let i in novo_json.tarefas_guard)
+     //console.log(novo_json)
+    
+     for (i in novo_json.titulo_guard)
     {
+        //console.log("entrou no for")
         let lu = document.getElementById("novas_tarefas")
 
         let adicionando = document.createElement('li');
+        adicionando.setAttribute("id" ,"list-item")
 
-        adicionando.innerHTML = novo_json.tarefas_guard[i] + "<hr>" 
+        adicionando.innerHTML = novo_json.titulo_guard[i]
     
         lu.appendChild(adicionando)
+        
+        li = document.getElementsByTagName("li")[i]
 
-        console.log(novo_json)
-        console.log(i)
+        adicionando = document.createElement('p');
+
+        adicionando.innerHTML = "Descrição: " +  "<br>" + "......." + novo_json.descricao_guard[i]  
+    
+        li.appendChild(adicionando)
     } 
 }
 
